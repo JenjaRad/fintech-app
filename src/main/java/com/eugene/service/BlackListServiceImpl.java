@@ -1,5 +1,6 @@
 package com.eugene.service;
 
+import com.eugene.domain.Country;
 import com.eugene.domain.User;
 import com.eugene.repository.BlackListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,12 @@ public class BlackListServiceImpl implements BlackListService {
     }
 
     @Override
-    public boolean isInBlackList(long personId) {
+    public boolean isInUserInABlackList(long personId) {
         return this.repository.findByUser(new User(personId)) != null;
+    }
+
+    @Override
+    public boolean isCountryInABlackList(long countryId) {
+        return this.repository.findByCountry(new Country(countryId))!=null;
     }
 }

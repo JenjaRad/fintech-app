@@ -31,21 +31,21 @@ public class BlackListServiceTest {
     public void ifPersonInBlackListReturnTrue(){
         User user = this.userRepository.save(new User("Eugene", "Volkov"));
         this.blackListRepository.save(new BlackList(user));
-        boolean inBlackList = this.blackListService.isInBlackList(user.getId());
+        boolean inBlackList = this.blackListService.isInUserInABlackList(user.getId());
         assertTrue(inBlackList);
     }
     @Test
     public void ifPersonNotExistInBlackList(){
         User user = this.userRepository.save(new User("Eugene", "Volkov"));
-        boolean inBlackList = this.blackListService.isInBlackList(user.getId());
+        boolean inBlackList = this.blackListService.isInUserInABlackList(user.getId());
         assertFalse(inBlackList);
     }
     @Test
     public void ifTwoSamePersonsInAList(){
         User user1 = this.userRepository.save(new User("Eugene", "Volkov"));
         User user2 = this.userRepository.save(new User("Eugene", "Volkov"));
-        boolean inBlackList1 = this.blackListService.isInBlackList(user1.getId());
-        boolean inBlackList2 = this.blackListService.isInBlackList(user2.getId());
+        boolean inBlackList1 = this.blackListService.isInUserInABlackList(user1.getId());
+        boolean inBlackList2 = this.blackListService.isInUserInABlackList(user2.getId());
         assertTrue(inBlackList1);
         assertFalse(inBlackList2);
     }
