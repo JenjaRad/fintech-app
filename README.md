@@ -1,5 +1,5 @@
 
-![alt text](https://lh3.googleusercontent.com/proxy/Uu3MVXvK0jFbqc5W44d-tS1cRCMq5FwmzfDH0OlDEmotLgJY96fpEOK0tXRLeab1wiCQmJrMNRLrY-uyLkW57oRxDmrE3LdEMYHcStlurPRdhcNDXTUVl8Z1zDV-0MUBOg)
+![alt text](https://s3-us-west-2.amazonaws.com/medici-prod/root/Medici/public/uploads/custom2_is-embedded-finance-the-next-evolution-in-fintech.jpg?1599833701)
 
 
 #Problem definition
