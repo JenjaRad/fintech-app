@@ -7,10 +7,12 @@ public class Success<T> extends Result {
     public Success(T value) {
         this.value = value;
     }
-  public void setMessage(String message){
+
+    public void setMessage(String message) {
         this.message = message;
-  }
-    public T getValue(){
+    }
+
+    public T getValue() {
         return value;
     }
 }

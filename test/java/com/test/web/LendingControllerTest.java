@@ -9,6 +9,7 @@ import com.eugene.service.LendingService;
 import com.eugene.service.LimitService;
 import com.eugene.web.LendingController;
 import com.eugene.web.forms.FailError;
+import com.eugene.web.forms.Result;
 import com.eugene.web.forms.Success;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
