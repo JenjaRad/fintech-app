@@ -28,4 +28,5 @@ public class LimitServiceTest {
         boolean result = this.limitService.isLimit("Uaaaaaaaaaaaa");
         assertFalse(result);
     }
+
 }

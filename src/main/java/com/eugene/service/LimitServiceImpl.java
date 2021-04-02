@@ -35,8 +35,8 @@ public class LimitServiceImpl implements LimitService {
         return map.get(time).count > total;
     }
     private final class Pair{
-        private long start;
-        private int count;
+        private final long start;
+        private final int count;
 
         public Pair(long start, int count) {
             this.start = start;

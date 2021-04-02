@@ -37,4 +37,5 @@ public class LendingServiceImpl implements LendingService {
     public List<Lending> getByUserName(String name,String surname) {
         return this.repository.findByUser(new User(name,surname));
     }
+
 }
