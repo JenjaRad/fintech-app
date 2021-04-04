@@ -24,7 +24,7 @@ public class LimitFilter implements Filter {
     }
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig){
         logger.info("Get filter name",filterConfig.getFilterName());
     }
 
@@ -34,7 +34,7 @@ public class LimitFilter implements Filter {
         Locale locale = servletRequest.getLocale();
         if (!this.limitService.isLimit(locale != null ? locale.getCountry() : "ua")) {
             filterChain.doFilter(servletRequest, servletResponse);
-        }else {
+        } else {
             servletResponse.getOutputStream().write(objectMapper.writeValueAsBytes(new FailError("Cannot execute this country")));
         }
     }

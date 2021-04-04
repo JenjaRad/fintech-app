@@ -65,8 +65,7 @@ public class LendingControllerTest {
     public void applyLoan() throws Exception {
         List<Lending> landings = Arrays.asList(new Lending(0.0, "", new User("Eugene", "Volkov"), new Country("ua")));
         given(this.lendingService.getByUser(0)).willReturn(landings);
-        this.mockMvc.perform(MockMvcRequestBuilders.get("/0")
-                .accept(MediaType.APPLICATION_JSON)).
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/0").accept(MediaType.APPLICATION_JSON)).
                 andExpect(MockMvcResultMatchers.status().isOk()).
                 andExpect(MockMvcResultMatchers.content().
                         string(objectMapper.writeValueAsString(landings)));
@@ -84,6 +83,25 @@ public class LendingControllerTest {
     }
 
     @Test
+    public void ifCountryNotInBlackListThenApply() throws Exception {
+        List<Country> countries = Arrays.asList(new Country("ua"));
+        given(this.countryService.getAll()).willReturn(countries);
+        this.mockMvc.perform(MockMvcRequestBuilders.get(",")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(countries)));
+    }
+    @Test
+    public void applyCountryById() throws Exception {
+        List<Country> ua = Arrays.asList(new Country("ua"));
+        given(this.countryService.getByCountry(0)).willReturn(ua);
+        this.mockMvc.perform(MockMvcRequestBuilders.get("/")
+        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(ua)));
+    }
+
+    @Test
     public void applyUserByName() throws Exception {
         List<Lending> landings = Arrays.asList(new Lending(0.0, " ", new User("Eugene", "Volkov"), new Country("ua")));
         given(this.lendingService.getByUserName("Eugene", "Volkov")).willReturn(landings);
@@ -91,7 +109,6 @@ public class LendingControllerTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(objectMapper.writeValueAsString(landings)));
-
     }
 
     @Test
