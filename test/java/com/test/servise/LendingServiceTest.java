@@ -48,8 +48,8 @@ public class LendingServiceTest {
     public void findByPerson() {
         User user = this.userRepository.save(new User("Eugene", "Sidorov"));
         Country country = this.countryRepository.save(new Country("England"));
-        Lending loan = this.lendingService.apply(new Lending(0, "", user, country));
+        Lending lending = this.lendingService.apply(new Lending(0, "", user, country));
         List<Lending> all = this.lendingService.getByUser(user.getId());
-        assertSame(all.iterator().next(), is(loan));
+        assertSame(all.iterator().next(), is(lending));
     }
 }

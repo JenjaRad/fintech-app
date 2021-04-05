@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Locale;
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -38,9 +39,7 @@ public class LimitFilter implements Filter {
             servletResponse.getOutputStream().write(objectMapper.writeValueAsBytes(new FailError("Cannot execute this country")));
         }
     }
-
     @Override
-    public void destroy() {
-
+    public void destroy(){
     }
 }

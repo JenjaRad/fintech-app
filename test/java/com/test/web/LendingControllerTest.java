@@ -9,7 +9,6 @@ import com.eugene.service.LendingService;
 import com.eugene.service.LimitService;
 import com.eugene.web.LendingController;
 import com.eugene.web.forms.FailError;
-import com.eugene.web.forms.Result;
 import com.eugene.web.forms.Success;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
@@ -25,7 +24,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.TimeZone;
 
 import static org.mockito.BDDMockito.given;
 
@@ -94,7 +92,7 @@ public class LendingControllerTest {
     @Test
     public void applyCountryById() throws Exception {
         List<Country> ua = Arrays.asList(new Country("ua"));
-        given(this.countryService.getByCountry(0)).willReturn(ua);
+        given(this.countryService.getByLending(0)).willReturn(ua);
         this.mockMvc.perform(MockMvcRequestBuilders.get("/")
         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())

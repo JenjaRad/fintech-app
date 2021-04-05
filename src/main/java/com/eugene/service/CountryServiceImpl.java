@@ -1,6 +1,7 @@
 package com.eugene.service;
 
 import com.eugene.domain.Country;
+import com.eugene.domain.Lending;
 import com.eugene.repository.CountryRepository;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public List<Country> getByCountry(long id) {
-        return this.repository.findByCountry(new Country(id));
+    public List<Country> getByLending(long id) {
+        return this.repository.findByLending(new Lending(id));
     }
 }

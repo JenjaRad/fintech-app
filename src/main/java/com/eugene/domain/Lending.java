@@ -23,6 +23,11 @@ public class Lending {
     public Lending() {
     }
 
+    public Lending(final long id){
+        this();
+        this.id = id;
+    }
+
     public Lending(double amount, String term, User user, Country country) {
         this();
         this.amount = amount;
