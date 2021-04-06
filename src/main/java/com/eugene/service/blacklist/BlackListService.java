@@ -1,4 +1,4 @@
-package com.eugene.service;
+package com.eugene.service.blacklist;
 
 public interface BlackListService {
     boolean isInUserInABlackList(long personId);

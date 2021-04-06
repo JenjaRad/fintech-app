@@ -1,4 +1,4 @@
-package com.eugene.service;
+package com.eugene.service.lending;
 
 import com.eugene.domain.Lending;
 import com.eugene.domain.User;

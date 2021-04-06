@@ -1,8 +1,9 @@
-package com.eugene.service;
+package com.eugene.service.lending;
 
 import com.eugene.domain.Lending;
 import com.eugene.domain.User;
 import com.eugene.repository.LendingRepository;
+import com.eugene.service.lending.LendingService;
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

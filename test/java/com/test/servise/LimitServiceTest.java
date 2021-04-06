@@ -1,7 +1,7 @@
 package com.test.servise;
 
 import com.eugene.Application;
-import com.eugene.service.LimitService;
+import com.eugene.service.limit.LimitService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

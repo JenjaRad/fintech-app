@@ -1,4 +1,4 @@
-package com.eugene.service;
+package com.eugene.service.country;
 
 import com.eugene.domain.Country;
 

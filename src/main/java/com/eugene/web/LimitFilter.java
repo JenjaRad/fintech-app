@@ -1,6 +1,6 @@
 package com.eugene.web;
 
-import com.eugene.service.LimitService;
+import com.eugene.service.limit.LimitService;
 import com.eugene.web.forms.FailError;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Locale;
 import static org.slf4j.LoggerFactory.getLogger;
 

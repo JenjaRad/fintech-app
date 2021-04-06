@@ -5,7 +5,7 @@ import com.eugene.domain.BlackList;
 import com.eugene.domain.User;
 import com.eugene.repository.BlackListRepository;
 import com.eugene.repository.UserRepository;
-import com.eugene.service.BlackListService;
+import com.eugene.service.blacklist.BlackListService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

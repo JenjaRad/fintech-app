@@ -1,8 +1,9 @@
-package com.eugene.service;
+package com.eugene.service.blacklist;
 
 import com.eugene.domain.Country;
 import com.eugene.domain.User;
 import com.eugene.repository.BlackListRepository;
+import com.eugene.service.blacklist.BlackListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

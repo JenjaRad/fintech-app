@@ -1,8 +1,8 @@
 package com.eugene.web;
 
 import com.eugene.domain.Lending;
-import com.eugene.service.BlackListService;
-import com.eugene.service.LendingService;
+import com.eugene.service.blacklist.BlackListService;
+import com.eugene.service.lending.LendingService;
 import com.eugene.web.forms.FailError;
 import com.eugene.web.forms.Result;
 import com.eugene.web.forms.Success;

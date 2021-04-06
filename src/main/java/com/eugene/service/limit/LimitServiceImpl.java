@@ -1,5 +1,6 @@
-package com.eugene.service;
+package com.eugene.service.limit;
 
+import com.eugene.service.limit.LimitService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
